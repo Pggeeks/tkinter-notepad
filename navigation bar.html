@@ -26,7 +26,24 @@
         }
         #searchbar{
             float: left;
-            margin-right: 50pc;       }
+            margin-right: 50pc;       
+            border-radius: 20px;
+            }
+        #searchbar input{
+            border-radius: 15px;
+            height: 20px;
+            background-color:rgb(24, 253, 253);
+            margin-bottom: 2px;
+            position: relative;
+            bottom:7px;
+            right: 10px;
+        }
+        #scon{
+            background: url("search1.png") no-repeat scroll transparent;
+            background-size: cover;
+            width: 32px;
+            height: 32px
+        }
     </style>
 </head>
 <body>
@@ -34,11 +51,11 @@
         <ul>
             <li><a href="#">home</a></li>
             <li><a href="#">menu</a></li>
-            <li><a href="#">contact us</</li>
+            <li><a href="#">contact us</li>
             <div id="searchbar">
                 <form action="dev.html">
                 <input type="text" placeholder="search..">
-                <button type="submit">search</button>
+                <button type="submit" id="scon"></button>
                 </form>
             </div>
         </ul>
