@@ -56,15 +56,29 @@ class notepad(Tk):
         self.filemenu.add_command(label="Save as", command=self.savefile)
         self.filemenu.add_separator()
         self.menu_b.add_cascade(label="File", menu=self.filemenu)
-        self.menu_b.add_cascade(label="Word Wrap",command=self.launch)
+        self.menu_b.add_command(label="Word Wrap",command=self.launch)
         self.config(menu=self.menu_b)
         #######################
     def launch(self):
         root=Tk()
         root.title("word wrap")
-        root.geometry("400x300")
-        root.maxsize(width=400,height=300)
+        root.geometry("400x320")
+        root.maxsize(width=300,height=400)
         root.config(bg="white")
+        self.f1=Frame(root,bg="white",bd=5,width=160,height=200,cursor="target",relief=RIDGE)
+        ### buttons for font selection
+        self.btn1=Button(self.f1,bg="white",fg="black",text="ABCDE abcd")
+        self.btn2=Button(self.f1,bg="white",fg="black",text="ABCDE abcd")
+        self.btn3=Button(self.f1,bg="white",fg="black",text="ABCDE abcd")
+        self.btn4=Button(self.f1,bg="white",fg="black",text="ABCDE abcd")
+        self.btn5=Button(self.f1,bg="white",fg="black",text="ABCDE abcd")
+        self.btn1.place(x=27,y=8)
+        self.btn2.place(x=27,y=41)
+        self.btn3.place(x=27,y=74)
+        self.btn4.place(x=27,y=107)
+        self.btn5.place(x=27,y=140)
+        Label(root,text="select font",bg="white",fg="black",font="roman 13 bold").place(x=28,y=8)
+        self.f1.place(x=20,y=33)
         root.mainloop()
 
 
